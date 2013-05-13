@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Automation Demo</title>
+</head>
+<body>
+<form id="addressDetails" action="" method="post">
+    <fieldset class="question-group">
+        <span id="policyHolderAddress-icon">&nbsp;</span>
+
+        <h3>Policy Holder Address</h3>
+
+        <div class="question-wrapper">
+
+            You have told us your home address is
+            <br class="clear"> <br class="clear"> <strong> Level 1, 66 CLARENCE ST<br class="clear"> Sydney NSW 2000
+        </strong> <br class="clear">
+            <br class="clear">
+
+            <div id="postalAddressContainer" style="display: block;">
+                <br class="clear"> <span class="question">Enter your postal address below</span>
+                <label for="address.suburbPostcodeState" class="sub-question">
+                    Postcode or Suburb
+                </label>
+                <input id="address.suburbPostcodeState" name="address.suburbPostcodeState"
+                       class="suburbPostcodeState ui-autocomplete-input" type="text" value="" autocomplete="off"
+                       role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                <br class="clear">
+                <label for="address.building" class="sub-question">
+                    Building Name
+                    <span class="note">(if applicable)</span>
+                </label>
+                <input id="address.building" name="address.building" class=""
+                       placeholder="Enter Building Name" type="text" value="" maxlength="30">
+                <br class="clear">
+
+                <label for="address.unitDetails.unitNumber" class="sub-question above">
+                    Unit Number
+                </label>
+                <input id="address.unitDetails.unitNumber" name="address.unitDetails.unitNumber" class=""
+                       placeholder="e.g. 1A" type="text" value="" maxlength="8">
+                <br class="clear">
+                <label for="address.levelDetails.levelNumber" class="sub-question above">
+                    Level Number
+                </label>
+                <input id="address.levelDetails.levelNumber" name="address.levelDetails.levelNumber" class=""
+                       placeholder="e.g. 12" type="text" value="" maxlength="8" >
+                <br class="clear">
+                <br class="clear">
+                <label for="address.streetDetails.streetNumber" class="sub-question streetDetails">
+                    Street Detail
+                </label>
+                <br class="clear">
+                <label for="address.streetDetails.streetNumber" id="streetNumber"
+                       class="sub-question above streetNumber">
+                    Street Number
+                </label>
+
+                <input id="address.streetDetails.streetNumber" name="address.streetDetails.streetNumber"
+                       class="" type="text" value="" maxlength="9">
+                <br class="clear">
+                <label for="address.streetDetails.streetName" id="streetName" class="sub-question above streetName">
+                    Street Name
+                </label><input id="address.streetDetails.streetName" name="address.streetDetails.streetName"
+                               class="ui-autocomplete-input" placeholder="e.g. Sample St" type="text"
+                               value="" maxlength="30" autocomplete="off" role="textbox" aria-autocomplete="list"
+                               aria-haspopup="true">
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="question-group">
+        <span id="policyHolderContactDetails-icon">&nbsp;</span>
+
+        <h3>Contact details</h3>
+
+        <div class="question-wrapper">
+            <span class="question">Please provide at least one contact number (including area code)</span>
+
+            <div class="five columns alpha omega">
+                <label for="contactNumber" id="contactNumber.label" class="question contactNumber">
+                    Contact number
+                </label>
+
+                <input id="contactNumber" name="contactNumber" maxlength="10" type="text" value="">
+            </div>
+            <div class="four columns alpha omega">
+                <label for="alternativeContactNumber" id="alternativeContactNumber.label"
+                       class="question contactNumber">
+                    Alternative contact number
+                </label>
+                <input id="alternativeContactNumber" name="alternativeContactNumber" maxlength="10" type="text"
+                       value="">
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <label for="emailAddress" id="emailAddress.label" class="question">
+                Email address
+            </label>
+            <input id="emailAddress" name="emailAddress" maxlength="120" placeholder="e.g. john@company.com" type="text"
+                   value="">
+            <label for="confirmedEmailAddress" id="confirmedEmailAddress.label" class="question">
+                Confirm Email address
+            </label>
+            <input id="confirmedEmailAddress" name="confirmedEmailAddress" maxlength="120" type="text" value="">
+        </div>
+
+    </fieldset>
+
+    <div class="submit-wrapper">
+        <input class="btn-continue" type="submit" id="_eventId_submit" name="_eventId_submit" value="Continue">
+        <input class="btn-back" type="submit" id="_eventId_previous" name="_eventId_previous" value="Back">
+    </div>
+
+</form>
+</body>
+</html>
