@@ -27,17 +27,27 @@ public class FirefoxFunctionalTest extends TestCase {
     @Test
     public void testLocal() throws Exception {
         driver.get("http://localhost:8080/automation/index.html");
-        setFieldValue("address.suburbPostcodeState", "2000, Sydney, NSW");
-        setFieldValue("address.building", "Global Center");
-        setFieldValue("address.unitDetails.unitNumber", "88");
-        setFieldValue("address.levelDetails.levelNumber", "8");
-        setFieldValue("address.streetDetails.streetNumber", "66");
-        setFieldValue("address.streetDetails.streetName", "Clarence ST");
+        Thread.sleep(1000);
+        setFieldValue("personName", "Biao Wang");
+        setFieldValue("personPhone", "18683619867");
+        setFieldValue("personWeibo", "@ibiaowang");
+        setFieldValue("personGitHub", "biaowang");
+        setFieldValue("automationBenifitOne", "Duplication");
+        setFieldValue("automationBenifitTwo", "Productivity");
 
         Thread.sleep(3000);
+
+        selectRadioButton("preferAutomationOption");
+
+        Thread.sleep(3000);
+
     }
 
     private void setFieldValue(String id, String value) {
         driver.findElement(By.id(id)).sendKeys(value);
+    }
+
+    private void selectRadioButton(String id){
+        driver.findElement(By.id(id)).click();
     }
 }
